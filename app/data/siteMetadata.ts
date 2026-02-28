@@ -3,7 +3,7 @@ export const siteMetadata = {
   author: "Braydon Coyer",
   headerTitle: "Braydon's Portfolio",
   description:
-    "ผมเบรย์ดอน วิศวกรหน้าบ้าน (Front-end Engineer) นักเขียนบล็อก และนักพูดระดับนานาชาติ ยินดีต้อนรับสู่พื้นที่ส่วนตัวของผมในโลกอินเทอร์เน็ต!",
+    "ยินดีต้อนรับสู่พอร์ตโฟลิโอของผม พื้นที่รวบรวมประสบการณ์ ผลงาน และสิ่งที่ผมหลงใหลเกี่ยวกับเทคโนโลยีและการพัฒนาซอฟต์แวร์",
   language: "th",
   siteUrl: "https://braydoncoyer.dev",
   siteRepo: "https://github.com/braydoncoyer/braydoncoyer.dev",

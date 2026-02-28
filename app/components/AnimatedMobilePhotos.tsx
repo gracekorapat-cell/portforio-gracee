@@ -25,8 +25,8 @@ export function AnimatedMobilePhotos({ delay }: AnimatedMobilePhotosProps) {
             <ShadowBox width={170} height={252}></ShadowBox>
             <img
               className="absolute left-0 top-2 h-[245px] w-[163px] rotate-[-5deg] rounded-lg object-cover"
-              src="/aurora.jpg"
-              alt="Aurora"
+              src="/grace_uniform.jpg"
+              alt="Grace"
             />
           </motion.div>
           <motion.div
@@ -42,8 +42,8 @@ export function AnimatedMobilePhotos({ delay }: AnimatedMobilePhotosProps) {
             <ShadowBox width={188} height={278}></ShadowBox>
             <img
               className="absolute left-0 top-0 h-[280px] w-[190px] rotate-[-8deg] rounded-lg object-cover shadow-lg shadow-black/20"
-              src="/bel.jpg"
-              alt="Bel"
+              src="/grace_thai.jpg"
+              alt="Grace"
             />
           </motion.div>
           <motion.div
@@ -59,8 +59,8 @@ export function AnimatedMobilePhotos({ delay }: AnimatedMobilePhotosProps) {
             <ShadowBox width={170} height={252}></ShadowBox>
             <img
               className="absolute left-0 top-0 h-[245px] w-[163px] rotate-[10deg] rounded-lg object-cover shadow-lg shadow-black/20"
-              src="/ariel.jpg"
-              alt="Ariel"
+              src="/grace_uniform.jpg"
+              alt="Grace"
             />
           </motion.div>
           <motion.div
@@ -76,8 +76,8 @@ export function AnimatedMobilePhotos({ delay }: AnimatedMobilePhotosProps) {
             <ShadowBox width={170} height={252}></ShadowBox>
             <img
               className="absolute left-0 top-0 h-[245px] w-[163px] rotate-[-12deg] rounded-lg object-cover shadow-lg shadow-black/20"
-              src="/rapansel.jpg"
-              alt="Rapansel"
+              src="/grace_thai.jpg"
+              alt="Grace"
             />
           </motion.div>
         </div>

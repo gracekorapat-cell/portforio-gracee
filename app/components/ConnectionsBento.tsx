@@ -199,9 +199,9 @@ export function ConnectionsBento({
           </span>
         </div>
         <div className="z-20 mt-auto w-full text-balance text-center">
-          <h2 className="text-base font-medium">Connections</h2>
+          <h2 className="text-base font-medium">เครือข่าย</h2>
           <p className="mt-1 text-text-secondary">
-            An evolving list of people I&apos;ve met and those I wish to meet.
+            รายชื่อผู้คนที่มีความหมายและความสัมพันธ์ที่ดีต่อกัน
           </p>
         </div>
       </div>

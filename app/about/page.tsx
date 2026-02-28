@@ -1,6 +1,5 @@
 import { NewsletterSignUp } from "@/app/components/NewsletterSignUp";
 import { HorizontalLine } from "@/app/components/HorizontalLine";
-import { getTimeOfDayGreeting } from "app/lib/utils";
 import React from "react";
 import { CurrentlyPlayingBento } from "@/app/components/CurrentlyPlayingBento";
 import { ConnectionsBento } from "@/app/components/ConnectionsBento";
@@ -14,7 +13,7 @@ import { AboutTrackPattern } from "@/app/components/AboutTrackPattern";
 import { Photo } from "@/app/components/Photo";
 
 export default function AboutPage() {
-  const timeOfDayGreeting = getTimeOfDayGreeting();
+
 
   return (
     <div className="relative mt-14">
@@ -24,9 +23,7 @@ export default function AboutPage() {
         <GridWrapper className="space-y-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-around lg:px-24">
             <div className="order-2 mx-auto max-w-lg lg:order-1 lg:m-0 lg:max-w-3xl lg:pr-12">
-              <div className="text-center text-sm font-medium text-indigo-600 lg:text-left">
-                <span>{timeOfDayGreeting}</span>
-              </div>
+
               <h1 className="mx-auto max-w-2xl text-balance text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-5xl lg:text-left lg:text-6xl lg:leading-[64px]">
                 I&apos;m Braydon, a creative frontend engineer.
               </h1>
@@ -301,9 +298,7 @@ export default function AboutPage() {
               <div className="hidden lg:col-span-2 lg:col-start-11 lg:row-span-10 lg:block lg:min-h-[50px]">
                 <CurrentlyReadingBento />
               </div>
-              <div className="lg:col-span-7 lg:row-span-8">
-                <ConnectionsBento linkTo="/connections" />
-              </div>
+
 
               <div className="lg:col-span-3 lg:row-span-4">
                 <StatsBento />

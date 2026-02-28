@@ -4,14 +4,12 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function ProfilePicture() {
-  const [imageSrc, setImageSrc] = useState("/rapansel.jpg");
+  const [imageSrc, setImageSrc] = useState("/grace_uniform.jpg");
   const [isChanging, setIsChanging] = useState(false);
 
   const images = [
-    "/bel.jpg",
-    "/rapansel.jpg",
-    "/ariel.jpg",
-    "/aurora.jpg",
+    "/grace_uniform.jpg",
+    "/grace_thai.jpg",
   ];
 
   const changeImage = () => {

@@ -69,9 +69,9 @@ export function SpeakingBento() {
         <div className="absolute inset-0 h-full w-full bg-gradient-to-t from-white"></div>
         <div className="absolute bottom-6 left-6 z-50 grid h-full grid-cols-2 grid-rows-2 items-end gap-8">
           <div className="col-1 row-start-2 text-balance">
-            <h2 className="mb-2 font-medium">Speaking</h2>
+            <h2 className="mb-2 font-medium">การบรรยาย</h2>
             <p className="text-text-secondary">
-              Talks, podcasts, tutorials and more
+              พอดแคสต์ บทเรียน และงานบรรยายต่างๆ
             </p>
           </div>
         </div>

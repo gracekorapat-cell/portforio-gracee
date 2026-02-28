@@ -35,9 +35,9 @@ export default async function Home() {
               <AnimatedText
                 as="h1"
                 delay={HEADING_DELAY}
-                className="mx-auto max-w-2xl text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]"
+                className="mx-auto max-w-3xl text-center text-5xl font-bold leading-tight tracking-tighter text-text-primary md:text-7xl md:leading-[80px]"
               >
-                สวัสดีวันอังคาร จิตใจสงบสุข <br /> มีรอยยิ้ม มีความสุขในทุกๆวัน
+                Portfolio แนะนำตัว
               </AnimatedText>
             </GridWrapper>
             <GridWrapper>
@@ -45,9 +45,9 @@ export default async function Home() {
                 <AnimatedText
                   as="p"
                   delay={PARAGRAPH_DELAY}
-                  className="leading-8 text-text-secondary"
+                  className="mx-auto max-w-2xl text-2xl font-medium leading-8 text-text-secondary md:text-3xl"
                 >
-                  ฉันชื่อ ชบาแก้ว มีพี่น้องชื่อ ชบาจาน และ ชบาช้อน ฉันอายุ 2 ขวบ ส่วนสูง 200 เซนติเมตร ชอบกินส้มตำให่เฉาก๊วย
+                  นางสาวกรภัทธ ศรีเงินถม (เกรซ)
                 </AnimatedText>
               </div>
             </GridWrapper>
@@ -68,34 +68,20 @@ export default async function Home() {
           {/* <AboutPattern /> */}
           <div className="space-y-4">
             <GridWrapper>
-              <div className="text-center text-sm font-medium text-indigo-600">
-                <span>เกี่ยวกับ</span>
-              </div>
+              <h2 className="text-center text-3xl font-bold text-indigo-600 md:text-4xl">
+                ประวัติส่วนตัว
+              </h2>
             </GridWrapper>
             <GridWrapper>
-              <h2 className="mx-auto max-w-lg text-balance text-center text-3xl font-medium leading-10 tracking-tight text-text-primary md:text-4xl">
-                มีเพื่อนสนิทชื่อว่า เจนมากับนุ่นแล้วก็มากับโบว์ ชอบขายข้าวเกรียบ
-              </h2>
+              <p className="mx-auto max-w-2xl text-center text-xl leading-10 text-text-primary">
+                นางสาวกรภัทธ ศรีเงินถม ชื่อเล่นเกรซ อายุ 22 ปี เกิดเมื่อวันที่ 26 ธันวาคม พ.ศ. 2546
+              </p>
             </GridWrapper>
           </div>
 
           <GridWrapper>
-            <div className="grid grid-cols-1 gap-2 md:grid-cols-12 lg:grid-rows-[14]">
-              <div className="col-span-1 md:col-span-5 lg:col-span-5 lg:row-span-6">
-                <AboutMeBento linkTo="/about" />
-              </div>
-
-              <div className="md:col-span-12 lg:col-span-7 lg:row-span-8">
-                <ConnectionsBento linkTo="/connections" />
-              </div>
-
-              <div className="md:col-span-7 md:row-start-1 lg:col-span-5 lg:row-span-7">
-                <ToolboxBento linkTo="/toolbox" />
-              </div>
-
-              <div className="md:col-span-12 lg:col-span-7 lg:row-span-5">
-                <CalendarBento />
-              </div>
+            <div className="mx-auto max-w-2xl">
+              <AboutMeBento linkTo="/about" />
             </div>
           </GridWrapper>
         </section>
@@ -108,74 +94,26 @@ export default async function Home() {
               <BgGradient />
             </span>
             <GridWrapper>
-              <div className="text-center text-sm font-medium text-indigo-600">
-                <span>บล็อก</span>
-              </div>
-            </GridWrapper>
-            <GridWrapper>
-              <h2 className="mx-auto max-w-lg text-center text-3xl font-medium leading-10 tracking-tighter text-text-primary md:text-4xl">
-                ผมชอบแบ่งปันการทดลองและความรู้กับผู้อื่น
+              <h2 className="text-center text-3xl font-bold text-indigo-600 md:text-4xl">
+                ประวัติการศึกษา
               </h2>
             </GridWrapper>
-          </div>
-
-          <div className="z-10">
             <GridWrapper>
-              <ul className="z-50 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
-                {featuredArticles.length > 0 ? (
-                  <>
-                    {featuredArticles.slice(0, 4).map((post, index) => (
-                      <FeaturedBlogCard
-                        key={post.slug}
-                        slug={post.slug}
-                        imageName={post.imageName}
-                        title={post.title}
-                        summary={post.summary}
-                        className={clsx(
-                          // Hide the fourth article on mobile and desktop
-                          index === 3 && "hidden md:block lg:hidden",
-                        )}
-                      />
-                    ))}
-                  </>
-                ) : (
-                  <p>ยังไม่มีอะไรให้ดูในตอนนี้...</p>
-                )}
-              </ul>
+              <div className="mx-auto max-w-2xl text-center text-xl leading-relaxed text-text-primary">
+                <p>พ.ศ. 2558 สำเร็จการศึกษาระดับประถมศึกษา จากโรงเรียนสะบ้าย้อย</p>
+                <p>พ.ศ. 2564 สำเร็จการศึกษาระดับมัธยมศึกษา จากโรงเรียนสะบ้าย้อยวิทยา</p>
+              </div>
             </GridWrapper>
           </div>
         </section>
 
-        {/* My Site Section */}
-        <section className="relative space-y-10 md:space-y-16">
-          {/* <MySitePattern /> */}
-          <div className="space-y-4 text-balance">
-            <GridWrapper>
-              <div className="text-center text-sm font-medium text-indigo-600">
-                <span>เว็บไซต์ของผม</span>
-              </div>
-            </GridWrapper>
-            <GridWrapper>
-              <h2 className="text-center text-3xl font-medium leading-10 tracking-tighter text-text-primary md:mx-auto md:max-w-lg md:text-4xl">
-                เว็บไซต์ของผมคือกระบะทรายสำหรับการทดลอง เชิญสำรวจ ลองเล่น และทักทายกันได้ครับ
-              </h2>
-            </GridWrapper>
-          </div>
 
-          <GridWrapper>
-            <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
-              <span className="col-span-1 h-[276px] sm:block md:hidden lg:block">
-                <ChangelogBento />
-              </span>
-              <SpeakingBento />
-              <CommunityWallBento />
-            </div>
-          </GridWrapper>
-        </section>
 
-        {/* Newsletter Section */}
+        {/* Contact Section */}
         <section>
-          <NewsletterSignUp />
+          <NewsletterSignUp 
+            title="ข้อมูลการติดต่อ" 
+          />
         </section>
       </div>
     </section>

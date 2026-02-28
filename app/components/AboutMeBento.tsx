@@ -1,17 +1,15 @@
-import { getTimeOfDayGreeting } from "../lib/utils";
 import { BentoCard } from "./BentoCard";
 
 export function AboutMeBento({ linkTo }: { linkTo?: string }) {
-  const timeOfDayGreeting = getTimeOfDayGreeting();
+
 
   return (
     <BentoCard height="h-[275px] md:h-[304px] lg:h-[220px]" linkTo={linkTo}>
       <div className="group flex h-full">
         <div className="text-balance">
-          <h2 className="mb-4 text-base font-medium">เกี่ยวกับ</h2>
+          <h2 className="mb-4 text-base font-medium">ประวัติเบื้องต้น</h2>
           <p className="mb-2 text-balance pr-1 text-text-secondary md:pr-4">
-            {timeOfDayGreeting} <br />
-            ผมเบรย์ดอน เป็นวิศวกรหน้าบ้านที่มีประสบการณ์
+            ปัจจุบันกำลังศึกษาอยู่ชั้นปีที่ 4 หลักสูตรครุศาสตรบัณฑิต สาขาวิชาฟิสิกส์ มหาวิทยาลัยราชภัฏสงขลา
           </p>
         </div>
         <div className="relative">
@@ -28,8 +26,8 @@ export function AboutMeBento({ linkTo }: { linkTo?: string }) {
           </div>
           <img
             className="absolute -top-1 left-0 h-[270px] w-[180px] rotate-[8deg] rounded-lg object-cover shadow transition-all duration-500 group-hover:rotate-[4deg] group-hover:scale-105"
-            src="/bel.jpg"
-            alt="A headshot"
+            src="/grace_uniform.jpg"
+            alt="Grace's photo"
           />
         </div>
       </div>

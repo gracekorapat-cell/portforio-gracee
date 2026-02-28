@@ -104,83 +104,13 @@ export function NewsletterSignUp({
             <div className="absolute bottom-[44.5px] right-[48px] z-20 hidden h-2 w-px bg-zinc-300 md:block"></div>
 
             <h2 className="mb-4 text-3xl font-medium text-slate-50">{title}</h2>
-            <p className="z-50 mb-8 max-w-[336px] text-base leading-8 text-gray-300 md:mb-12">
-              {description}
-            </p>
-            <div className="z-50 mb-4 space-y-4">
-              <form
-                onSubmit={handleSubmit}
-                className="relative md:inline-block"
-              >
-                <label htmlFor="email" className="sr-only">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="bobloblaw@gmail.com"
-                  value={formState.email}
-                  onChange={(e) =>
-                    setFormState((prev) => ({ ...prev, email: e.target.value }))
-                  }
-                  className="w-full rounded-full border border-gray-400 bg-transparent px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-slate-100 focus:ring-offset-2 focus:ring-offset-dark-primary md:w-[425px]"
-                  disabled={formState.isLoading}
-                />
-                {/* Honeypot field - hidden from real users, bots will fill this */}
-                <div
-                  aria-hidden="true"
-                  style={{
-                    position: "absolute",
-                    left: "-9999px",
-                    top: "-9999px",
-                    opacity: 0,
-                    height: 0,
-                    width: 0,
-                    overflow: "hidden",
-                    pointerEvents: "none",
-                  }}
-                >
-                  <label htmlFor="website">เว็บไซต์</label>
-                  <input
-                    type="text"
-                    id="website"
-                    name="website"
-                    tabIndex={-1}
-                    autoComplete="off"
-                    value={formState.website}
-                    onChange={(e) =>
-                      setFormState((prev) => ({
-                        ...prev,
-                        website: e.target.value,
-                      }))
-                    }
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="group absolute right-1 top-1 isolate inline-flex h-[42px] items-center justify-center overflow-hidden rounded-full bg-slate-100 px-4 py-2.5 text-left text-sm font-medium text-slate-900 shadow-[0_1px_theme(colors.white/0.07)_inset,0_1px_3px_theme(colors.gray.900/0.2)] ring-1 ring-white transition duration-300 ease-[cubic-bezier(0.4,0.36,0,1)] before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-gradient-to-b before:from-white/20 before:opacity-50 before:transition-opacity before:duration-300 before:ease-[cubic-bezier(0.4,0.36,0,1)] after:pointer-events-none after:absolute after:inset-0 after:-z-10 after:rounded-full after:bg-gradient-to-b after:from-white/10 after:from-[46%] after:to-[54%] after:mix-blend-overlay hover:before:opacity-100"
-                  disabled={formState.isLoading}
-                >
-                  {formState.isLoading ? "กำลังโหลด..." : buttonText}
-                </button>
-              </form>
-              {/* Set minimum height to prevent layout shift */}
-              <div className="min-h-[15px] md:min-h-[30px]">
-                {formState.message && (
-                  <p
-                    className={`text-sm ${
-                      formState.isSuccess ? "text-indigo-300" : "text-rose-400"
-                    }`}
-                  >
-                    {formState.message}
-                  </p>
-                )}
-              </div>
+
+            <div className="z-50 space-y-4 text-lg leading-8 text-gray-300">
+              <p><span className="font-bold text-white text-xl">Facebook :</span> Korapat Srigentorm</p>
+              <p><span className="font-bold text-white text-xl">Instagram :</span> grxcee.eee</p>
+              <p><span className="font-bold text-white text-xl">Gmail :</span> gracekorapat@gmail.com</p>
+              <p><span className="font-bold text-white text-xl">Phone :</span> 080-7698420</p>
             </div>
-            <p className="text-base text-gray-300">
-              <span className="font-bold text-white">ไม่มีสแปม</span> ผมไม่เคยส่งสแปม 
-              และคุณสามารถยกเลิกการสมัครได้ทุกเมื่อ!
-            </p>
             <svg
               className="absolute -top-8 right-0 z-10 hidden lg:block"
               width="453"

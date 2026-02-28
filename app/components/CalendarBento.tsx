@@ -27,17 +27,17 @@ const CalendarDay: React.FC<{ day: number | string; isHeader?: boolean }> = ({
 
 export function CalendarBento() {
   const currentDate = new Date();
-  const currentMonth = currentDate.toLocaleString("default", { month: "long" });
-  const currentYear = currentDate.getFullYear();
-  const firstDayOfMonth = new Date(currentYear, currentDate.getMonth(), 1);
+  const currentMonth = currentDate.toLocaleString("th-TH", { month: "long" });
+  const currentYear = currentDate.getFullYear() + 543; // Buddhist Era for Thai
+  const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
   const firstDayOfWeek = firstDayOfMonth.getDay();
   const daysInMonth = new Date(
-    currentYear,
+    currentDate.getFullYear(),
     currentDate.getMonth() + 1,
     0,
   ).getDate();
 
-  const bookingLink = `https://cal.com/braydon-coyer-8ayx8q/30min?month=${currentYear}-${(
+  const bookingLink = `https://cal.com/braydon-coyer-8ayx8q/30min?month=${currentDate.getFullYear()}-${(
     currentDate.getMonth() + 1
   )
     .toString()
@@ -66,9 +66,9 @@ export function CalendarBento() {
     <BentoCard height="h-[220px]" linkTo={bookingLink}>
       <div className="group grid h-full grid-cols-12 gap-5">
         <div className="col-span-5 text-balance md:col-span-5">
-          <h2 className="mb-4 text-base font-medium">Book a call with me</h2>
+          <h2 className="mb-4 text-base font-medium">นัดหมายพูดคุย</h2>
           <p className="mb-2 text-text-secondary">
-            I&apos;d love to chat even if there&apos;s no agenda!
+            ผมยินดีที่จะแลกเปลี่ยนความรู้และประสบการณ์กับทุกคนครับ
           </p>
         </div>
         <div className="absolute left-[43%] top-7 transition-all duration-500 ease-out md:-right-14 md:left-auto md:group-hover:-right-12 md:group-hover:top-5">
@@ -87,7 +87,7 @@ export function CalendarBento() {
                   <span className="h-1 w-1 rounded-full bg-text-tertiary">
                     &nbsp;
                   </span>
-                  <p className="text-xs text-text-tertiary">30 min call</p>
+                  <p className="text-xs text-text-tertiary">พูดคุย 30 นาที</p>
                 </div>
                 <div className="mt-4 grid grid-cols-7 grid-rows-5 gap-2 px-4">
                   {renderCalendarDays()}

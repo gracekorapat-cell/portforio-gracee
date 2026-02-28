@@ -79,7 +79,7 @@ export const PhotoGallery = ({
       y: "15px",
       zIndex: 40,
       direction: "left" as Direction,
-      src: "/rapansel.jpg",
+      src: "/grace_uniform.jpg",
     },
     {
       id: 2,
@@ -88,7 +88,7 @@ export const PhotoGallery = ({
       y: "32px",
       zIndex: 30,
       direction: "left" as Direction,
-      src: "/bel.jpg",
+      src: "/grace_thai.jpg",
     },
     {
       id: 3,
@@ -97,7 +97,7 @@ export const PhotoGallery = ({
       y: "8px",
       zIndex: 20,
       direction: "right" as Direction,
-      src: "/ariel.jpg",
+      src: "/grace_uniform.jpg",
     },
     {
       id: 4,
@@ -106,7 +106,7 @@ export const PhotoGallery = ({
       y: "22px",
       zIndex: 10,
       direction: "right" as Direction,
-      src: "/aurora.jpg",
+      src: "/grace_thai.jpg",
     },
   ];
 

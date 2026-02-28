@@ -34,9 +34,9 @@ export function ToolboxBento({ linkTo }: { linkTo?: string }) {
       <div className="group-hover:from-bg-white absolute inset-y-0 left-0 z-20 w-1/5 bg-gradient-to-r from-bg-primary to-transparent"></div>
       <div className="group-hover:from-bg-white absolute inset-y-0 right-0 z-20 w-1/5 bg-gradient-to-l from-bg-primary to-transparent"></div>
       <div className="z-20 text-center">
-        <h2 className="text-base font-medium">Toolbox</h2>
+        <h2 className="text-base font-medium">กล่องเครื่องมือ</h2>
         <p className="mt-1 text-text-secondary">
-          Check out my favorite tools and spots around the web.
+          รวบรวมเครื่องมือและเทคโนโลยีที่ผมเลือกใช้ในการทำงาน
         </p>
       </div>
       <div className="mt-10 flex items-center justify-center gap-3 transition-all duration-500 ease-in-out md:mt-12">

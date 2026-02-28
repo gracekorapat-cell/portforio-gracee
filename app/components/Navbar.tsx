@@ -14,9 +14,6 @@ type NavigationLink = {
 const navigationLinks: readonly NavigationLink[] = [
   { name: "หน้าแรก", link: "/" },
   { name: "แนะนำตัว", link: "/about" },
-  { name: "บล็อก", link: "/blog" },
-  { name: "โปรเจกต์", link: "/projects" },
-  { name: "การพูด", link: "/speaking" },
 ] as const;
 
 const Navbar: React.FC = () => {

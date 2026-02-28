@@ -13,6 +13,10 @@ export type CurrentlyPlaying = {
 
 // Get the access token from Spotify
 async function getAccessToken() {
+  if (!process.env.SPOTIFY_CLIENT_ID || !process.env.SPOTIFY_CLIENT_SECRET || !process.env.SPOTIFY_REFRESH_TOKEN) {
+    console.warn("Spotify environment variables are missing.");
+    return null;
+  }
   const basic = Buffer.from(
     `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`,
   ).toString("base64");
@@ -20,22 +24,31 @@ async function getAccessToken() {
   params.append("grant_type", "refresh_token");
   params.append("refresh_token", process.env.SPOTIFY_REFRESH_TOKEN!);
 
-  const response = await fetch("https://accounts.spotify.com/api/token", {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${basic}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: params.toString(),
-  });
+  try {
+    const response = await fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      headers: {
+        Authorization: `Basic ${basic}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: params.toString(),
+    });
 
-  const result = await response.json();
-  return result.access_token;
+    const result = await response.json();
+    return result.access_token;
+  } catch (error) {
+    console.error("Error fetching Spotify access token:", error);
+    return null;
+  }
 }
 
 // Get the currently playing song from Spotify
 export async function getCurrentlyPlaying() {
   const access_token = await getAccessToken();
+
+  if (!access_token) {
+    return false;
+  }
 
   const response = await fetch(
     "https://api.spotify.com/v1/me/player/currently-playing",

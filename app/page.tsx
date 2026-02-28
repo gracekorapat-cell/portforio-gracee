@@ -1,13 +1,6 @@
 import { BgGradient } from "./components/BgGradient";
 import { NewsletterSignUp } from "./components/NewsletterSignUp";
-import { ChangelogBento } from "./components/ChangelogBento";
 import { fetchAndSortBlogPosts } from "./lib/utils";
-import { SpeakingBento } from "./components/SpeakingBento";
-import { CommunityWallBento } from "./components/CommunityWallBento";
-import { CalendarBento } from "./components/CalendarBento";
-import { FeaturedBlogCard } from "./components/FeaturedBlogCard";
-import { ToolboxBento } from "./components/ToolboxBento";
-import { ConnectionsBento } from "./components/ConnectionsBento";
 import { AnimatedProfilePicture } from "./components/AnimatedProfilePicture";
 import { AnimatedText } from "./components/AnimatedText";
 import { PhotoGallery } from "./components/PhotoGallery";
@@ -17,9 +10,6 @@ import { GridWrapper } from "./components/GridWrapper";
 import clsx from "clsx";
 
 export default async function Home() {
-  const allPublishedBlogPosts = await fetchAndSortBlogPosts();
-  const featuredArticles = allPublishedBlogPosts.slice(0, 4);
-
   const PROFILE_DELAY = 0;
   const HEADING_DELAY = PROFILE_DELAY + 0.2;
   const PARAGRAPH_DELAY = HEADING_DELAY + 0.1;

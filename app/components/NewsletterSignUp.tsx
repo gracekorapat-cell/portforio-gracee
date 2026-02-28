@@ -1,9 +1,7 @@
 "use client";
 
-import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { GridWrapper } from "./GridWrapper";
-import { createContact } from "@/app/db/actions";
 
 interface NewsletterSignUpProps {
   title?: string;
@@ -11,74 +9,12 @@ interface NewsletterSignUpProps {
   buttonText?: string;
 }
 
-interface FormState {
-  email: string;
-  message: string;
-  isSuccess: boolean;
-  isLoading: boolean;
-  website: string; // Honeypot field - should remain empty for real users
-}
-
 export function NewsletterSignUp({
   title = "สมัครรับข่าวสารจากผม",
   description = "อัปเดตเกี่ยวกับชีวิต บทความล่าสุด วิธีการทำต่าง ๆ และสิ่งที่ผมค้นพบ.",
   buttonText = "สมัครสมาชิก",
 }: NewsletterSignUpProps) {
-  const [formState, setFormState] = useState<FormState>({
-    email: "",
-    message: "",
-    isSuccess: false,
-    isLoading: false,
-    website: "",
-  });
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setFormState((prev) => ({
-      ...prev,
-      message: "",
-      isSuccess: false,
-      isLoading: true,
-    }));
-
-    if (!formState.email) {
-      setFormState((prev) => ({
-        ...prev,
-        message: "กรุณาระบุที่อยู่อีเมล",
-        isLoading: false,
-      }));
-      return;
-    }
-
-    try {
-      const result = await createContact(formState.email, formState.website);
-
-      if (result.success) {
-        setFormState((prev) => ({
-          ...prev,
-          message: "สมัครเสร็จเรียบร้อย!",
-          isSuccess: true,
-          email: "",
-        }));
-      } else {
-        setFormState((prev) => ({
-          ...prev,
-          message: "Something went wrong. :(",
-          isSuccess: false,
-        }));
-      }
-    } catch (error) {
-      setFormState((prev) => ({
-        ...prev,
-        message: "เกิดข้อผิดพลาดบางอย่าง :(",
-        isSuccess: false,
-      }));
-      console.error(error);
-    } finally {
-      setFormState((prev) => ({ ...prev, isLoading: false }));
-    }
-  };
-
+  const isSuccess = false;
   return (
     <div className="relative pb-16">
       <GridWrapper>
@@ -180,15 +116,15 @@ export function NewsletterSignUp({
                 >
                   <motion.stop
                     animate={{
-                      stopColor: formState.isSuccess ? "#4f46e5" : "#4B4B4F",
+                      stopColor: isSuccess ? "#4f46e5" : "#4B4B4F",
                     }}
                     transition={{ duration: 0.5 }}
                   />
                   <motion.stop
                     offset="1"
                     animate={{
-                      stopColor: formState.isSuccess ? "#818cf8" : "#3C3C3F",
-                      stopOpacity: formState.isSuccess ? 1 : 0,
+                      stopColor: isSuccess ? "#818cf8" : "#3C3C3F",
+                      stopOpacity: isSuccess ? 1 : 0,
                     }}
                     transition={{ duration: 0.5 }}
                   />
@@ -203,14 +139,14 @@ export function NewsletterSignUp({
                 >
                   <motion.stop
                     animate={{
-                      stopColor: formState.isSuccess ? "#4f46e5" : "#4B4B4F",
+                      stopColor: isSuccess ? "#4f46e5" : "#4B4B4F",
                     }}
                     transition={{ duration: 0.5 }}
                   />
                   <motion.stop
                     offset="1"
                     animate={{
-                      stopColor: formState.isSuccess ? "#818cf8" : "#3C3C3F",
+                      stopColor: isSuccess ? "#818cf8" : "#3C3C3F",
                     }}
                     transition={{ duration: 0.5 }}
                   />
